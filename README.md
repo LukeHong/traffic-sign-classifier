@@ -114,7 +114,11 @@ My final model results were:
 * validation set accuracy of **0.956**
 * test set accuracy of **0.937**
 
-I choose the LeNet architecture to find how best it could be.
+I choose the LeNet architecture as my final model. LeNet was designed to classify the handwritten number. It is similar to traffic sign recognition that both of these dataset are totally focus on the target that **the handwritten number and the traffic sign almost occupy the whole part of image**. The difference between these dataset is that the handwritten number is only **image with one channel**(which means grayscale image), but the traffic sign is **image with three channels**(RGB image).
+
+Therefore, I can only change the first input layer to classify the traffic sign.
+
+
 After some tuning then I found some problem. If I set **low epoch** number then I might not get a better model as result. But if I set **high epoch** number then I might get a overfitting model.
 
 To solve these problems, I made early stop to avoid overfitting at first. I won't get a overfitting model after that, but there's one more problem appears.
